@@ -1,0 +1,6 @@
+{
+  "name": "Our Little Universe — Aa & Lalaa",
+  "description": "Satu dunia kecil, berisi cerita kita. Interactive romantic memory desktop, digital scrapbook, bouquet & music player for Aa & Lalaa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

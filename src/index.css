@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream: #FFF9F2;
+    --color-blush: #F7C9D4;
+    --color-dusty: #EBA7BA;
+    --color-lavender: #E7DDF8;
+    --color-yellow: #FFF0B8;
+    --color-sage: #DCE8D5;
+    --color-brown: #634B50;
+  }
+
+  body {
+    background-color: #FFF9F2;
+    color: #634B50;
+    font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+.font-handwritten {
+  font-family: 'Caveat', cursive;
+}
+
+.font-serif-romantic {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-rounded {
+  font-family: 'Nunito', system-ui, sans-serif;
+}
+
+/* Washi tape texture effect */
+.washi-tape {
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 1px 3px rgba(99, 75, 80, 0.12);
+  backdrop-filter: blur(2px);
+  position: relative;
+}
+
+.washi-tape::before, .washi-tape::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background-size: 6px 6px;
+}
+
+/* Paper texture shadow */
+.paper-shadow {
+  box-shadow: 0 4px 20px -2px rgba(99, 75, 80, 0.08), 0 2px 6px -1px rgba(99, 75, 80, 0.06);
+}
+
+.polaroid-shadow {
+  box-shadow: 0 10px 25px -5px rgba(99, 75, 80, 0.12), 0 8px 10px -6px rgba(99, 75, 80, 0.08);
+}
+
+.window-shadow {
+  box-shadow: 0 20px 40px -15px rgba(99, 75, 80, 0.2), 0 0 0 1px rgba(235, 167, 186, 0.3);
+}
+
+/* Floating animation */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+@keyframes flower-sway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.95;
+  }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+.animate-flower-sway {
+  transform-origin: bottom center;
+  animation: flower-sway 5s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s ease-in-out infinite;
+}
+
+/* Custom romantic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #F7C9D4;
+  border-radius: 9999px;
+  border: 2px solid #FFF9F2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EBA7BA;
+}
